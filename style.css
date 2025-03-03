@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /*colors*/
+    --white-color:#fff;
+    --dark-color:#252525;
+    --primary-color:#3b141c;
+    --secondary-color:#f3961c;
+    --light-pink-color:#faf4f5;
+    --medium-gray-color:#ccc;
+
+    /*font sixe*/
+    --font-size-s:0.9rem;
+    --font-size-n:1rem;
+    --font-size-m:1.12rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:2.3rem;
+
+    /*font weight*/
+    --font-weight-n:400;
+    --font-weight-m:500;
+    --font-weight-semibold:600;
+    --font-weight-bold:700;
+
+    /*border radius (i dont think this is how border radious should be initialise)*/
+    --border-radious-s:8px;
+    --border-radious-m:30px;
+    --border-radious-circle:50%;
+
+    /* site max width*/
+    --site-max-width:1300px;
+
+
+}
+/*styling the whole site*/
+ul{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+button{
+    cursor:pointer;
+    border: none;
+    background: none;
+}
+img{
+    width: 100%;
+}
+
+.section_content{
+    margin: 0 auto;
+    padding:0 20px;
+    max-width: var(--site-max-width);/*but my laptop max with is 1024px so this any not have any effect on my pc but it's effect will be visible in the bigger screen*/
+}
+
+/* nav bar styling*/
+header{
+    position: fixed;
+    width:100%;
+    z-index:5;
+    background:var(--primary-color);
+
+}
+header .nav_bar{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    justify-content: space-between;
+}
+.nav_bar .logo_text{
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    
+}
+.nav_bar .nav_menu{
+    display: flex;
+    gap:10px;
+}
+.nav_bar .nav_menu .nav_link{
+    padding:10px 18px;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radious-m);
+    color:var(--white-color);
+    transition:0.3s ease;
+}
+.nav_bar .nav_menu .nav_link:hover{
+    background: var(--secondary-color);
+    color:var(--primary-color)
+}
+
+/*hero section*/
+.hero_section{
+    min-height: 100vh;
+    background-color: var(--primary-color);
+
+}
+.hero_section .section_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    color: var(--white-color);
+}
+.hero_section .hero_detail .title{
+    font-size: var(--font-size-xxl);
+    color:var(--secondary-color);
+    font-family: "Miniver",sans-serif;
+}
+.hero_section .hero_detail .subtitle{
+    font-size: var(--font-size-xl);
+    margin-top: 8px;
+    max-width: 70%;
+    font-weight: var(--font-weight-semibold);
+
+}
+.hero_section .hero_detail .description{
+    font-size: var(--font-size-m);
+    margin: 24px 0px 40px;
+    max-width:70%;
+}
+.hero_detail .buttons{
+    display: flex;
+    gap:23px;
+}
+.hero_section .hero_detail .button{
+    padding:10px 26px;
+    border:2px solid transparent;
+    color:var(--primary-color);
+    background: var(--secondary-color);
+    border-radius: var(--border-radious-m);
+    font-weight: var(--font-weight-m);
+    transition:0.3s ease;
+}
+.hero_section .hero_detail .contect-us{
+    color:var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+
+.hero_section .hero_detail .button:hover{
+    color:var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+
+}
+.hero_section .hero_detail .contect-us:hover{
+    color:var(--primary-color);
+    border-color:var(--secondary-color);
+    background:var(--secondary-color);
+}
+.hero_section .hero_image_wrapper{
+    max-width: 400px;
+    margin-right: 50px;
+    
+}
