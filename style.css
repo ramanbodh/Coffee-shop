@@ -96,6 +96,9 @@ header .nav_bar{
     background: var(--secondary-color);
     color:var(--primary-color)
 }
+.nav_bar :where(#menu_open_button,#menu_close_button){
+    display: none;
+}
 
 /*hero section*/
 .hero_section{
@@ -160,5 +163,47 @@ header .nav_bar{
 .hero_section .hero_image_wrapper{
     max-width: 400px;
     margin-right: 50px;
+}
+
+@media  screen and (max-width:900px) {
+    :root{
+        /*font sixe*/
+    --font-size-m:1rem;
+    --font-size-l:1.3rem;
+    --font-size-xl:1.5rem;
+    --font-size-xxl:1.8rem;
+    }
+    .nav_bar :where(#menu_open_button,#menu_close_button){
+        display: block;
+        font-size: var(--font-size-l);
+    }
+    .nav_bar #menu_open_button{
+        color: var(--white-color);
+    }
+    .nav_bar #menu_close_button{
+        position: absolute;
+        right: 30px;
+        top:30px;
+    }
+    .nav_bar .nav_menu{
+        display:block;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        top:0;
+        width: 300px;
+        background:var(--white-color);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+    }
+    .nav_bar .nav_menu .nav_link{
+        color:var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+
+    }
     
 }
