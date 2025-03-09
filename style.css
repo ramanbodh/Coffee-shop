@@ -104,7 +104,6 @@ header .nav_bar{
 .hero_section{
     min-height: 100vh;
     background-color: var(--primary-color);
-
 }
 .hero_section .section_content{
     display: flex;
@@ -189,7 +188,7 @@ header .nav_bar{
         display:block;
         position: fixed;
         height: 100%;
-        left: 0;
+        left: -300px;
         top:0;
         width: 300px;
         background:var(--white-color);
@@ -197,6 +196,10 @@ header .nav_bar{
         flex-direction: column;
         align-items: center;
         padding-top: 100px;
+        transition:left 0.2s ease;
+    }
+    body.show_menu_bar  .nav_bar .nav_menu{
+        left:0;
     }
     .nav_bar .nav_menu .nav_link{
         color:var(--dark-color);
